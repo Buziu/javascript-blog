@@ -26,6 +26,8 @@ const titleClickHandler = function (event) {
   console.log(articleHref);
 
   /* find the correct article using the selector (value of 'href' attribute) */
+  const targetArticle = document.querySelector(articleHref);
+  console.log(targetArticle);
 
   /* add class 'active' to the correct article */
 };
