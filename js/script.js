@@ -47,9 +47,13 @@
     titleList.innerHTML = "";
     console.log(titleList);
     /* remove contents of titleList */
-
+    const articles = document.querySelectorAll(optArticleSelector);
+    for (let arcicle of articles) {
+      const articleId = article.getAttribute("Id");
+    }
     /* for each article */
     /* get the article id */
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
     /* find the title element */
     /* get the title from the title element */
     /* create HTML of the link */
