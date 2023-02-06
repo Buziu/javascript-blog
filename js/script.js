@@ -12,7 +12,7 @@
       activeLink.classList.remove("active");
     }
 
-    /* [IN PROGRESS] add class 'active' to the clicked link */
+    /* [DONE] add class 'active' to the clicked link */
 
     clickedElement.classList.add("active");
     console.log("clickedElement:", clickedElement);
@@ -43,6 +43,9 @@
     optTitleListSelector = ".titles";
 
   function generateTitleLinks() {
+    const titleList = document.querySelector(optTitleListSelector);
+    titleList.innerHTML = "";
+
     /* remove contents of titleList */
     /* for each article */
     /* get the article id */
