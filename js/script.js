@@ -40,12 +40,12 @@
     optTitleListSelector = '.titles',
     optArticleTagsSelector = '.post-tags .list';  
 
-  function generateTitleLinks() {
+  function generateTitleLinks(customSelector = ''){
     const titleList = document.querySelector(optTitleListSelector);
     titleList.innerHTML = '';
     console.log(titleList);
     /* remove contents of titleList */
-    const articles = document.querySelectorAll(optArticleSelector);
+    const articles = document.querySelectorAll(optArticleSelector + customSelector);
     for (let article of articles) {
       /* for each article */
       const articleId = article.getAttribute('Id');
