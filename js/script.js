@@ -189,21 +189,21 @@
     /* make a new constant "href" and read the attribute "href" of the clicked element */
     const href = clickedElement.getAttribute('href');
     console.log(href);
-    /* make a new constant "tag" and extract tag from the "href" constant */
+    /* make a new constant "tag" and extract author from the "href" constant */
     const author = href.replace('#author-','');
-    /* find all tag links with class active */
+    /* find all authors links with class active */
     let activeAuthorsLinks = document.querySelectorAll('a.active[href^="#author-"]');
     console.log(activeAuthorsLinks);
-    /* START LOOP: for each active tag link */
+    /* START LOOP: for each active author link */
     for(let activeAuthorLink of activeAuthorsLinks){
       console.log(activeAuthorLink);
       /* remove class active */
       activeAuthorLink.classList.remove('active');
-      /* END LOOP: for each active tag link */
+      /* END LOOP: for each active author link */
     }
     /* find all tag links with "href" attribute equal to the "href" constant */
     const AuthorsLinks = document.querySelectorAll('a[href="' + href + '"]' );
-    /* START LOOP: for each found tag link */
+    /* START LOOP: for each found author link */
     for( let authorLink of AuthorsLinks){
       
       /* add class active */
@@ -216,7 +216,7 @@
   }
 
   function addClickListenersToAuthors(){
-    /* find all links to tags */
+    /* find all links to authors */
     const authorsLinks = document.querySelectorAll('a[href^="#author-"]');
     console.log(authorsLinks);
     /* START LOOP: for each link */
