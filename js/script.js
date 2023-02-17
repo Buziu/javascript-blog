@@ -175,7 +175,7 @@
       /* get tags from data-tags attribute */
       const articleAuthor = article.getAttribute('data-author');
       console.log(articleAuthor);  
-      let linkHTML = '<a href="#'+ articleAuthor +'">'articleAuthor'</a>';
+      let linkHTML = '<a href="#'+ articleAuthor +'">' + articleAuthor + '</a>';
       console.log(linkHTML);
       /* add generated code to html variable */
       html = html + linkHTML;
