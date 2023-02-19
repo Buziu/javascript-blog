@@ -77,9 +77,8 @@
   }
 
   function generateTags(){
-    /* [NEW] create a new variable allTags with an empty array */
-    let allTags = [];
-  
+    /* [NEW] create a new variable allTags with an empty object */
+    let allTags = {};
     /* find all articles */
     const articles = document.querySelectorAll(optArticleSelector);
     console.log(articles);
@@ -105,10 +104,14 @@
         /* add generated code to html variable */
         html = html + ' ' + linkHTML;
         /* [NEW] check if this link is NOT already in allTags */
-        if(allTags.indexOf(linkHTML) == -1){
-          /* [NEW] add generated code to allTags array */
-          allTags.push(linkHTML);
+        if(!allTags[tag]) {
+          /* [NEW] add tag to allTags object */
+          allTags[tag] = 1;
         }
+        else {
+          allTags[tag]++;
+        }
+        console.log(allTags);
       /* END LOOP: for each tag */
       }
       /* insert HTML of all the links into the tags wrapper */
